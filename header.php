@@ -12,7 +12,7 @@ include("./getVisit.php");
   <meta content="Freesmsnigeria is a cloud base school management system for managing and automating secondary school activities which is fully
   supported on all devices both PC & Mobile Phones. Easy-to-use on Mobile phones for Students, Teachers, Parents & School Head. 24/7 Customer Care. Cost-effective Solution" name="description">
   <meta content="sms, school, school management system, free sms nigeria, academic system, school activities management system, free sms" name="keywords">
-
+  <script data-ad-client="ca-pub-5615909705062666" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- Favicons -->
   <link href="assets/img/lolo.jpg" rel="icon">
   <link href="assets/img/lolo.jpg" rel="apple-touch-icon">
