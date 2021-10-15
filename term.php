@@ -5,7 +5,7 @@ include('header.php');
     <h3>Generic Terms of Service Template</h3>
     <p>
       Please read these terms of service ("terms", "terms of service")
-      carefully before using [website] website (the "service") operated by [name] ("us", 'we", "our").
+      carefully before using <a href="https://freesmsnigeria.com">freesmsnigeria.com</a> website (the "service") operated by freesmsnigeria.com  ("us", 'we", "our").
     </p>
     
     <h3>
@@ -18,11 +18,11 @@ include('header.php');
       you accept the following conditions. This is why we urge you to read them carefully.
     </p>
     
-    <h3>
+    <h3 id="privacy">
       Privacy Policy
     </h3>
     <p>
-      Before you continue using our website we advise you to read our privacy policy [link to privacy policy]
+      Before you continue using our website we advise you to read our privacy policy <a href="https://freesmsnigeria.com/term.html#privacy">Privacy</a>
        regarding our user data collection.
        It will help you better understand our practices.
     </p>
@@ -30,9 +30,9 @@ include('header.php');
       Copyright
     </h3>
     <p>
-      Content published on this website (digital downloads, images, texts, graphics, logos) is the property of [name] and/or its content creators and protected by international copyright laws. 
+      Content published on this website (digital downloads, images, texts, graphics, logos) is the property of freesmsnigeria.com and/or its content creators and protected by international copyright laws. 
       The entire compilation of the content found on 
-      this website is the exclusive property of [name], with copyright authorship for this compilation by [name].
+      this website is the exclusive property of freesmsnigeria.com, with copyright authorship for this compilation by freesmsnigeria.com.
     </p>
     
     <h3>
@@ -47,7 +47,7 @@ include('header.php');
       You also agree that all notices, disclosures,
       agreements and other communications we provide to you electronically 
       meet the legal requirements that such communications be in writing.
-    </p>
+    </p><!-- 
     <h3>
       Applicable Law
     </h3>
@@ -56,7 +56,7 @@ include('header.php');
       By visiting this website, you agree that the laws of the [your location], without regard to principles of conflict laws,
        will govern these terms of service, 
       or any dispute of any sort that might come between [name] and you, or its business partners and associates.
-    </p>
+    </p> -->
     <h3>
       Disputes
       
@@ -77,7 +77,7 @@ include('header.php');
     </p>
     <p>
       We reserve all rights (but not the obligation) to remove and/or edit such content.
-       When you post your content, you grant [name] non-exclusive, royalty-free and irrevocable right to use, reproduce,
+       When you post your content, you grant freesmsnigeria.com non-exclusive, royalty-free and irrevocable right to use, reproduce,
         publish, modify such content throughout the world in any media.
 
     </p>

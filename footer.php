@@ -42,6 +42,7 @@
         <h4>Join Our Newsletter</h4>            
         <form action="" method="post">
           <input type="email" name="email"><input type="submit" value="Subscribe">
+          <button type="submit" class="btn btn-success">Subscribe</button>
         </form>
       </div>
 
