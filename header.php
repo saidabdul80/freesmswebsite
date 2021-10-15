@@ -53,10 +53,10 @@
       <div class="col-sm-6  d-flex align-items-center">
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html" class="active">About Us</a></li>  
-            <li><a href="services.html">Services</a></li>            
-            <li><a href="contact.html">Contact</a></li>  
+            <li><a href="index.php" class="active">Home</a></li>
+            <li><a href="about.php" class="active">About Us</a></li>  
+            <li><a href="services.php">Services</a></li>            
+            <li><a href="contact.php">Contact</a></li>  
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
