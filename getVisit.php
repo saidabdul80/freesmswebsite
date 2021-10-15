@@ -36,8 +36,11 @@ $date = date('Y-m-d');
 
 $check_ip = $conn->query("SELECT * FROM pageview WHERE userip='$user_ip' AND date_visit = '$date'");
 if($check_ip->num_rows >0)
-{
-  $updateview = $conn->query("UPDATE `pageview` AS p SET `p.totalview`=p.totalview+1 WHERE p.userip='$user_ip' AND p.date_visit = '$date' ");
+{ 
+    $ch = $check_ip->fetch_assoc();
+    $num = intval($ch['totalview']) + 1;
+    
+  $updateview = $conn->query("UPDATE `pageview` AS p SET `p.totalview`='$num' WHERE p.userip='$user_ip' AND p.date_visit = '$date' ");
 }else{    
   $insertview = $conn->query("INSERT INTO `pageview`(`id`, `page`, `totalview`, `userip`, `date_visit`,country, region, city)
                      VALUES (NULL,'-',1,'$user_ip','$date', '$country', '$region','$city')");  
