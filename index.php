@@ -14,7 +14,7 @@ include('header.php')
               <h2>Welcome to <span>FREESMS</span></h2>
               <p>The very first free School Management Software that’s Simple, Responsive on all device and No setup required
                 </p>
-              <div class="text-center"><a href="" class="btn-get-started">GET STARTED</a></div>
+              <div class="text-center"><a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn-get-started">GET STARTED</a></div>
             </div>
           </div>
         </div>
@@ -362,6 +362,30 @@ include('header.php')
     <!-- End Our Clients Section -->
 
   </main><!-- End #main -->
+
+  <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Easy Guide</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>To get the free sms nigeria you can contanct us through <a href="contact.html" class="btn btn-primary">contact us page</a> </p>
+        <p>if you wish to check up the system you can access it through <a href="https://demo.freesmsnigeria.com">Demo</a> </p>
+        <p>After we get your request we will need to confirm your school before proceeding with you. thank you</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
 
  <?php
 include('footer.php');
