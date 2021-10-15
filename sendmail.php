@@ -1,7 +1,6 @@
 <?php  
 //Composer's autoload file loads all necessary files
-require 'vendor/autoload.php';
-
+require './assets/phpmailer/PHPMailerAutoload.php';
 $mail = new PHPMailer;
 
 $mail->isSMTP();  // Set mailer to use SMTP
