@@ -11,7 +11,7 @@
   <meta content="sms, school, school management system, free sms nigeria, academic system, school activities management system, free sms" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/sms logopng_s.png" rel="icon">
+  <link href="assets/img/lolo.jpg" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -56,7 +56,7 @@
             <li><a href="index.php" class="active">Home</a></li>
             <li><a href="about.php" class="active">About Us</a></li>  
             <li><a href="services.php">Services</a></li>            
-            <li><a href="contact.php">Contact</a></li>  
+            <li><a href="contact.html">Contact</a></li>  
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
