@@ -34,13 +34,11 @@ $user_ip=$_SERVER['REMOTE_ADDR'];
 
 $date = date('Y-m-d');
 
-$check_ip = $conn->query("select userip from pageview where userip='$user_ip' and visit_date = '$date'");
-if($check_ip->num_rows >= 1)
+$check_ip = $conn->query("SELECT * FROM pageview WHERE userip='$user_ip' AND visit_date = '$date'");
+if($check_ip->num_rows >0)
 {
-  $updateview = $conn->query("UPDATE `pageview` SET `totalview`=totalview+1 WHERE userip='$user_ip' and visit_date = '$date' ");
-}
-else
-{    
+  $updateview = $conn->query("UPDATE `pageview` AS p SET `p.totalview`=p.totalview+1 WHERE p.userip='$user_ip' AND p.date_visit = '$date' ");
+}else{    
   $insertview = $conn->query("INSERT INTO `pageview`(`id`, `page`, `totalview`, `userip`, `date_visit`,country, region, city)
                      VALUES (NULL,'-',1,'$user_ip','$date', '$country', '$region','$city')");  
 }
