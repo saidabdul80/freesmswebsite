@@ -37,5 +37,6 @@ if($run->num_rows> 0){
     $id = getId($email, $conn);
     $run = $conn->query("INSERT INTO `messages`(`id`, `user_id`, `message`, `type`) VALUES (null, $id, '$message', '$type')");
 }
-include('sendmail.php');
+echo 200;
+//include('sendmail.php');
 ?>
