@@ -34,7 +34,7 @@ $user_ip=$_SERVER['REMOTE_ADDR'];
 
 $date = date('Y-m-d');
 
-$check_ip = $conn->query("SELECT * FROM pageview WHERE userip='$user_ip' AND visit_date = '$date'");
+$check_ip = $conn->query("SELECT * FROM pageview WHERE userip='$user_ip' AND date_visit = '$date'");
 if($check_ip->num_rows >0)
 {
   $updateview = $conn->query("UPDATE `pageview` AS p SET `p.totalview`=p.totalview+1 WHERE p.userip='$user_ip' AND p.date_visit = '$date' ");
