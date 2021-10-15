@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>free sms nigeria</title>
-  <meta content="   Freesmsnigeria is a cloud base school management system for managing and automating secondary school activities which is fully
+  <title>FREE SMS NIGERIA</title>
+  <meta content="Freesmsnigeria is a cloud base school management system for managing and automating secondary school activities which is fully
   supported on all devices both PC & Mobile Phones. Easy-to-use on Mobile phones for Students, Teachers, Parents & School Head. 24/7 Customer Care. Cost-effective Solution" name="description">
   <meta content="sms, school, school management system, free sms nigeria, academic system, school activities management system, free sms" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/lolo.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/lolo.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
