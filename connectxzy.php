@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "freedgdm_web";
-$password = "freedgdm_web";
-$dbname = "freedgdm_web";
+$username = "schoolc4_web";
+$password = "schoolc4_web";
+$dbname = "schoolc4_web";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
