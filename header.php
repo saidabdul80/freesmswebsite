@@ -14,6 +14,8 @@ include("./getVisit.php");
   <meta content="sms, school, school management system, free sms nigeria, academic system, school activities management system, free sms" name="keywords">
   <script data-ad-client="ca-pub-5615909705062666" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- Favicons -->
+  <script src="./assets/js/vue.js"></script>
+  <script type="module" src="chatbot/node_modules/vue-bot-ui/dist/vue-bot-ui.umd.js"></script>
   <link href="assets/img/lolo.jpg" rel="icon">
   <link href="assets/img/lolo.jpg" rel="apple-touch-icon">
 
@@ -47,9 +49,9 @@ include("./getVisit.php");
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center row w-100 justify-content-between">
       <div class="col-sm-6 mb-2">
-        <span class="d-flex align-items-center">          
+        <span class="d-flex align-items-center">
           <img src="assets/img/sms logopng_s.png" width="15%">
-          <h1 class="logo me-auto mx-2"><a href="index.html"><span>FREE</span>SMSNIGERIA</a></h1>    
+          <h1 class="logo me-auto mx-2"><a href="index.html"><span>FREE</span>SMSNIGERIA</a></h1>
         </span>
 
       </div>
@@ -57,13 +59,13 @@ include("./getVisit.php");
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
             <li><a href="index.php" class="active">Home</a></li>
-            <li><a href="about.php" class="active">About Us</a></li>  
-            <li><a href="services.php">Services</a></li>            
-            <li><a href="contact.html">Contact</a></li>  
+            <li><a href="about.php" class="active">About Us</a></li>
+            <li><a href="services.php">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
-  
+
         <div class="header-social-links d-flex">
           <a href="#" class="twitter"><i class="bu bi-twitter"></i></a>
           <a href="https://web.facebook.com/profile.php?id=100073957774342" class="facebook"><i class="bu bi-facebook"></i></a>
@@ -77,3 +79,19 @@ include("./getVisit.php");
 
     </div>
   </header><!-- End Header -->
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function() {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/616d581f86aee40a57371d30/1fi9i0g4a';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->

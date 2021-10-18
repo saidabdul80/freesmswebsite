@@ -46,3 +46,4 @@ if($check_ip->num_rows >0)
   $insertview = $conn->query("INSERT INTO `pageview`(`id`, `page`, `totalview`, `userip`, `date_visit`,country, region, city)
                      VALUES (NULL,'-',1,'$user_ip','$date', '$country', '$region','$city')");  
 }
+
