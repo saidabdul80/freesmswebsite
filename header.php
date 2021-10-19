@@ -82,16 +82,59 @@ include("./getVisit.php");
 
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
-    var Tawk_API = Tawk_API || {},
-      Tawk_LoadStart = new Date();
-    (function() {
-      var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/616d581f86aee40a57371d30/1fi9i0g4a';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
+  (function(global){
+	global.$_Tawk_AccountKey='616d581f86aee40a57371d30';
+	global.$_Tawk_WidgetId='1fi9i0g4a';
+	global.$_Tawk_Unstable=false;
+	global.$_Tawk = global.$_Tawk || {};
+	(function (w){
+	function l() {
+		if (window.$_Tawk.init !== undefined) {
+			return;
+		}
+
+		window.$_Tawk.init = true;
+
+		var files = [
+			'https://embed.tawk.to/_s/v4/app/61654731ad9/js/twk-main.js',
+			'https://embed.tawk.to/_s/v4/app/61654731ad9/js/twk-vendor.js',
+			'https://embed.tawk.to/_s/v4/app/61654731ad9/js/twk-chunk-vendors.js',
+			'https://embed.tawk.to/_s/v4/app/61654731ad9/js/twk-chunk-common.js',
+			'https://embed.tawk.to/_s/v4/app/61654731ad9/js/twk-runtime.js',
+			'https://embed.tawk.to/_s/v4/app/61654731ad9/js/twk-app.js'
+		];
+
+		if (typeof Promise === 'undefined') {
+			files.unshift('https://embed.tawk.to/_s/v4/app/61654731ad9/js/twk-promise-polyfill.js');
+		}
+
+		if (typeof Symbol === 'undefined' || typeof Symbol.iterator === 'undefined') {
+			files.unshift('https://embed.tawk.to/_s/v4/app/61654731ad9/js/twk-iterator-polyfill.js');
+		}
+
+		if (typeof Object.entries === 'undefined') {
+			files.unshift('https://embed.tawk.to/_s/v4/app/61654731ad9/js/twk-entries-polyfill.js');
+		}
+
+		var s0=document.getElementsByTagName('script')[0];
+
+		for (var i = 0; i < files.length; i++) {
+			var s1 = document.createElement('script');
+			s1.src= files[i];
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+		}
+	}
+	if (document.readyState === 'complete') {
+		l();
+	} else if (w.attachEvent) {
+		w.attachEvent('onload', l);
+	} else {
+		w.addEventListener('load', l, false);
+	}
+})(window);
+
+})(window);
   </script>
   <!--End of Tawk.to Script-->

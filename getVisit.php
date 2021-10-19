@@ -1,3 +1,4 @@
+<br><br><br><br><br><br><br><br>
 <?php
 
 include('./connectxzy.php');
@@ -25,13 +26,14 @@ function get_client_ip()
 
     return $ipaddress;
 }
+
 $user_ip = get_client_ip();
-$json     = file_get_contents("http://ipinfo.io/$user_ip/geo");
-$json     = json_decode($json, true);
-$country  = $json['country'];
-$region   = $json['region'];
-$city     = $json['city'];
-$user_ip=$_SERVER['REMOTE_ADDR'];
+/* $json     = file_get_contents("http://ipinfo.io/$user_ip/geo"); */
+$json  = json_decode( file_get_contents("http://ip-get-geolocation.com/api/json/".$user_ip), true);
+/* $json     = json_decode($json, true); */
+echo $country  = $json['country']??"";
+$region   = $json['region']??"";
+$city     = $json['city']??"";
 
 $date = date('Y-m-d');
 
@@ -39,9 +41,10 @@ $check_ip = $conn->query("SELECT * FROM pageview WHERE userip='$user_ip' AND dat
 if($check_ip->num_rows >0)
 { 
     $ch = $check_ip->fetch_assoc();
+    echo 23234232342;
     $num = intval($ch['totalview']) + 1;
     
-  $updateview = $conn->query("UPDATE `pageview` AS p SET `p.totalview`='$num' WHERE p.userip='$user_ip' AND p.date_visit = '$date' ");
+  $updateview = $conn->query("UPDATE `pageview` SET `totalview`='$num' WHERE userip='$user_ip' AND date_visit = '$date' ");
 }else{    
   $insertview = $conn->query("INSERT INTO `pageview`(`id`, `page`, `totalview`, `userip`, `date_visit`,country, region, city)
                      VALUES (NULL,'-',1,'$user_ip','$date', '$country', '$region','$city')");  

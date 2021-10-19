@@ -1,21 +1,20 @@
 /**
-* PHP Email Form Validation - v3.1
+
 * URL: https://bootstrapmade.com/php-email-form/
 * Author: BootstrapMade.com
 */
 (function () {
   "use strict";
 
-  let forms = document.querySelectorAll('.php-email-form');
+  let forms = document.querySelector('.php-email-form');
 
-  forms.forEach( function(e) {
-    e.addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      let thisForm = this;
-
-      let action = thisForm.getAttribute('action');
-      let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
+  forms.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let thisForm = this;
+    
+    let action = thisForm.getAttribute('action');
+    let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');    
       
       
       if( ! action ) {
@@ -47,18 +46,17 @@
       } else { */
         php_email_form_submit(thisForm, action, formData);
       //}
-    });
-  });
+    }); 
 
   function php_email_form_submit(thisForm, action, formData) {
-    fetch(action, {
+    fetch('https://schoolcomputings.com/contact.php', {
       method: 'POST',
       body: formData,
       headers: {'X-Requested-With': 'XMLHttpRequest'}
     })
     .then(response => {
       if( response.ok ) {
-        return response.text()
+        Swal.fire('Thank You, We Will get back to you Shortly');
       } else {
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
