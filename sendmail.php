@@ -7,7 +7,7 @@ class sendMail
     public $image = "";
     function __construct(){                
         $this->mail = new PHPMailer;
-        //$this->mail->SMTPDebug = 2;
+        $this->mail->SMTPDebug = 2;
         $this->mail->isSMTP();  // Set mailer to use SMTP
         $this->mail->Host = 'smtp.gmail.com';  // Specify mailgun SMTP servers smtp.mailgun.org
         $this->mail->SMTPAuth = true; // Enable SMTP authentication
