@@ -28,10 +28,15 @@ function get_client_ip()
 }
 
 $user_ip = get_client_ip();
-$json     = file_get_contents("http://ipinfo.io/$user_ip/geo");
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL,"http://ipinfo.io/$user_ip/geo");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+    $json = curl_exec($ch);
+    curl_close ($ch);
+//$json     = file_get_contents("http://ipinfo.io/$user_ip/geo");
 //$json  = json_decode( file_get_contents("http://ip-get-geolocation.com/api/json/".$user_ip), true);
  $json     = json_decode($json, true);
-echo $country  = $json['country']??"";
+$country  = $json['country']??"";
 $region   = $json['region']??"";
 $city     = $json['city']??"";
 
