@@ -25,8 +25,8 @@ class sendMail
         $this->mail->isHTML(true);   // Set email to be sent as HTML, if you are planning on sending plain text email just set it to false
         // The following is self explanatory
         $this->mail->Subject = "School computings";
-        $this->mail->Body    = "<div style='max-width:700px;min-width:320px;background:#f5f5f5;width:100%; padding:0px 20px;'>
-            <div style='padding:0 20px;text-align:center;height:100px'>
+        $this->mail->Body    = "<div style='max-width:700px;min-width:200px;background:#f5f5f5;width:100%; padding:0px 20px;'>
+            <div style='padding:20 20px;text-align:center;height:100px'>
                 <center>
                 <img src='cid:logo_2u' style='width:60px;vertical-align:middle'>
                 </center>
@@ -64,8 +64,8 @@ class sendMail
         $this->mail->isHTML(true);   // Set email to be sent as HTML, if you are planning on sending plain text email just set it to false
         // The following is self explanatory
         $this->mail->Subject = "School computings";
-        $this->mail->Body    = "<div style='max-width:700px;min-width:320px;background:#f5f5f5;width:100%; padding:0px 20px;'>
-            <div style='padding:0 20px;text-align:center;height:100px'>
+        $this->mail->Body    = "<div style='max-width:700px;min-width:200px;background:#f5f5f5;width:100%; padding:0px 20px;'>
+            <div style='padding:20px 20px;text-align:center;height:100px'>
                 <center>
                 <img src='cid:logo_2u' style='width:60px;vertical-align:middle'>
                 </center>
@@ -102,8 +102,8 @@ class sendMail
         $this->mail->isHTML(true);   // Set email to be sent as HTML, if you are planning on sending plain text email just set it to false
         // The following is self explanatory
         $this->mail->Subject = "School computings";
-        $this->mail->Body    = "<div style='max-width:700px;min-width:320px;background:#f5f5f5;width:100%; padding:0px 20px;'>
-            <div style='padding:0 20px;text-align:center;height:100px'>
+        $this->mail->Body    = "<div style='max-width:700px;min-width:200px;background:#f5f5f5;width:100%; padding:0px 20px;'>
+            <div style='padding:20px 20px;text-align:center;height:100px'>
                 <center>
                 <img src='cid:logo_2u' style='width:60px;vertical-align:middle'>
                 </center>

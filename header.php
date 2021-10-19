@@ -19,7 +19,16 @@ include("./getVisit.php");
   <script type="module" src="chatbot/node_modules/vue-bot-ui/dist/vue-bot-ui.umd.js"></script>
   <link href="assets/img/lolo.jpg" rel="icon">
   <link href="assets/img/lolo.jpg" rel="apple-touch-icon">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-210532119-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-210532119-1');
+</script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
