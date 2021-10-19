@@ -1,12 +1,11 @@
 <?php  
 //Composer's autoload file loads all necessary files
-require 'forms\Mailer\phpmailer\class.phpmailer.php';
+require './forms/Mailer/phpmailer/class.phpmailer.php';
 class sendMail
 {    
     public $mail;
     public $image = "";
-    function __construct(){        
-        $this->image =  'data:image/png;base64,'.base64_decode($this->image);
+    function __construct(){                
         $this->mail = new PHPMailer;
         //$this->mail->SMTPDebug = 2;
         $this->mail->isSMTP();  // Set mailer to use SMTP
