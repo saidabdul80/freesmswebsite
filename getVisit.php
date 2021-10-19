@@ -1,4 +1,4 @@
-<br><br><br><br><br><br><br><br>
+<br><br>
 <?php
 
 include('./connectxzy.php');
@@ -40,8 +40,7 @@ $date = date('Y-m-d');
 $check_ip = $conn->query("SELECT * FROM pageview WHERE userip='$user_ip' AND date_visit = '$date'");
 if($check_ip->num_rows >0)
 { 
-    $ch = $check_ip->fetch_assoc();
-    echo 23234232342;
+    $ch = $check_ip->fetch_assoc();    
     $num = intval($ch['totalview']) + 1;
     
   $updateview = $conn->query("UPDATE `pageview` SET `totalview`='$num' WHERE userip='$user_ip' AND date_visit = '$date' ");

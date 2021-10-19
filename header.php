@@ -8,8 +8,8 @@ include("./getVisit.php");
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>FREE SMS NIGERIA</title>
-  <meta content="Freesmsnigeria is a cloud base school management system for managing and automating secondary school activities which is fully
+  <title>School Computings NIGERIA</title>
+  <meta content="School computings is a cloud base school management system for managing and automating secondary school activities which is fully
   supported on all devices both PC & Mobile Phones. Easy-to-use on Mobile phones for Students, Teachers, Parents & School Head. 24/7 Customer Care. Cost-effective Solution" name="description">
   <meta content="sms, school, school management system, free sms nigeria, academic system, school activities management system, free sms" name="keywords">
   <script data-ad-client="ca-pub-5615909705062666" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -31,6 +31,7 @@ include("./getVisit.php");
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -50,8 +51,8 @@ include("./getVisit.php");
     <div class="container d-flex align-items-center row w-100 justify-content-between">
       <div class="col-sm-6 mb-2">
         <span class="d-flex align-items-center">
-          <img src="assets/img/sms logopng_s.png" width="15%">
-          <h1 class="logo me-auto mx-2"><a href="index.html"><span>FREE</span>SMSNIGERIA</a></h1>
+          <img src="assets/img/schoolcomputing_logo.png" width="15%">
+          <h1 class="logo me-auto mx-2"><a href="index.html"><span>SCHOOL</span>COMPUTING</a></h1>
         </span>
 
       </div>
@@ -61,7 +62,7 @@ include("./getVisit.php");
             <li><a href="index.php" class="active">Home</a></li>
             <li><a href="about.php" class="active">About Us</a></li>
             <li><a href="services.php">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

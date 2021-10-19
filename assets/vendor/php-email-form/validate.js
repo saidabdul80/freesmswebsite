@@ -49,14 +49,22 @@
     }); 
 
   function php_email_form_submit(thisForm, action, formData) {
-    fetch('https://schoolcomputings.com/contact.php', {
+    fetch('/Company/contactSubmit.php', {
       method: 'POST',
       body: formData,
       headers: {'X-Requested-With': 'XMLHttpRequest'}
     })
     .then(response => {
-      if( response.ok ) {
-        Swal.fire('Thank You, We Will get back to you Shortly');
+      if( response.ok ) {        
+        Swal.fire({
+          title: 'Thank You',
+          text: "We have sent you a mail, please verify your email.",
+          icon: 'success',          
+          confirmButtonText: 'Ok'
+        }).then((result) => {
+          location.reload();
+        })
+        //Swal.fire('Thank You, We Will get back to you Shortly');
       } else {
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }

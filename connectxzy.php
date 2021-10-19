@@ -2,10 +2,10 @@
 
 $passwordx="sc";
 $servername = "localhost";
-/* $username = "root";
-$password = ""; */
-$username = "schoolc4_web";
-$password = "schoolc4_web";
+$username = "root";
+$password = "";
+/* $username = "schoolc4_web";
+$password = "schoolc4_web"; */
 $dbname = "schoolc4_web";
 
 

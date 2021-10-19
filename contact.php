@@ -1,44 +1,119 @@
-<?php 
-include('./connectxzy.php');
-$name =$_POST["name"];
-$email =$_POST["email"];
-$school =$_POST["school"];
-$address =$_POST["address"];
-$phone =$_POST["phone"];
-$type =$_POST["type"];
-$message =$_POST["message"];
 
-function getId($email, $conn){
-    $run = $conn->query("SELECT * FROM `users` WHERE email='$email'");
-    if($run->num_rows >0){
-        $row = $run->fetch_assoc();
-        return $row["id"];
-    }
-}
+<?php
+include('header.php');
+?>
+<main id="main">
 
-$run = $conn->query("SELECT * FROM `users` WHERE email='$email'");
-if($run->num_rows> 0){
-    $id = getId($email, $conn);
-    $run = $conn->query("INSERT INTO `messages`(`id`, `user_id`, `message`, `type`) VALUES (null, $id, '$message', '$type')");
-}else{
-    $run = $conn->query("INSERT INTO `users`(`id`, `email`, `name`, `status`, `school`, `address`, phone) VALUES (NULL, '$email', '$name', '0','$school', '$address', '$phone' )");
-    $id = getId($email, $conn);
-    $run = $conn->query("INSERT INTO `messages`(`id`, `user_id`, `message`, `type`) VALUES (null, $id, '$message', '$type')");
-}
-include('sendmail.php');
-$details = array(
-    'name'=>$name,
-    'email'=>$email,
-    'school'=>$school,
-    'address'=>$address,
-    'phone'=>$phone,
-    'type'=>$type,
-    'message'=>$message
-);
-$string_to_encrypt=json_encode($details);
-$encrypted_string=openssl_encrypt($string_to_encrypt,"AES-128-ECB",$passwordx);
-//$decrypted_string=openssl_decrypt($encrypted_string,"AES-128-ECB",$password);
-$transport = new sendMail;
-$transport->sendToVerifyUser($email,$encrypted_string);
-echo json_encode(array('ok'=>true,'status'=>200));
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Contact</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Contact</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Contact Section ======= -->
+    <div class="map-section">
+      <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.7713714736533!2d6.54119161473909!3d9.614944193115766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104c71ad1d975787%3A0xb620ed134dd08c48!2sHospital%20Road%2C%20Minna%20920101%2C%20Minna!5e0!3m2!1sen!2sng!4v1634218642235!5m2!1sen!2sng" style="border:0; width: 100%; height: 350px;" allowfullscreen="" loading="lazy"></iframe>      
+    </div>
+
+    <section id="contact" class="contact">
+      <div class="container">
+<!-- 
+        <div class="row justify-content-center" data-aos="fade-up">
+
+          <div class="col-lg-10">
+
+            <div class="info-wrap">
+              <div class="row">
+                <div class="col-lg-4 info">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <p>A108 Adam Street<br>New York, NY 535022</p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>info@example.com<br>contact@example.com</p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>+1 5589 55488 51<br>+1 5589 22475 14</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div> -->
+
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-10">
+            <form action="forms/contactSubmit.php" method="post" role="form" class="php-email-form" data-recaptcha-site-key="Your_reCAPTCHA_site_key">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="school" id="school" placeholder="School Name" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="address" id="adress" placeholder="Address" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="phone" id="phone number" placeholder="Phone Number" required>
+              </div>
+              <select class="form-control" placeholder="type" name="type" required>
+                <option value="Request SMS">
+                  Request SMS
+                </option>
+                <option value="Complaints">
+                  Complaints
+                </option>
+                <option value="Contribution">
+                  Contribution
+                </option>
+              </select>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="form-check form-group ps-0">
+                <input id="privacy-policy" type="checkbox" name="privacy" value="accept" required>
+                <label class="form-check-label ps-1" for="privacy-policy">
+                  Accept our <a href="terms.html">terms of service</a> and <a href="term.html#privacy">privacy policy</a>
+                </label>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section> 
+    <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+<?php
+include("footer.php");
 ?>

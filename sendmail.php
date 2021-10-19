@@ -4,14 +4,18 @@ require 'forms\Mailer\phpmailer\class.phpmailer.php';
 class sendMail
 {    
     public $mail;
-    function __construct(){
+    public $image = "";
+    function __construct(){        
+        $this->image =  'data:image/png;base64,'.base64_decode($this->image);
         $this->mail = new PHPMailer;
+        //$this->mail->SMTPDebug = 2;
         $this->mail->isSMTP();  // Set mailer to use SMTP
-        $this->mail->Host = 'smtp.mailgun.org';  // Specify mailgun SMTP servers
+        $this->mail->Host = 'smtp.gmail.com';  // Specify mailgun SMTP servers smtp.mailgun.org
         $this->mail->SMTPAuth = true; // Enable SMTP authentication
         $this->mail->Username = 'saidabdulsalam5@gmail.com'; // SMTP username from https://mailgun.com/cp/domains
-        $this->mail->Password = 'said8080'; // SMTP password from https://mailgun.com/cp/domains
+        $this->mail->Password = 'sabsabdul8080'; // SMTP password from https://mailgun.com/cp/domains
         $this->mail->SMTPSecure = 'tls';   // Enable encryption, 'ssl'
+        $this->mail->AddEmbeddedImage('assets/img/schoolcomputing_logo.png', 'logo_2u');
     }
 
     function sendToVerifyUser($email,$token_r){
@@ -24,7 +28,7 @@ class sendMail
         $this->mail->Body    = "<div style='max-width:700px;min-width:320px;background:#f5f5f5;width:100%; padding:0px 20px;'>
             <div style='padding:0 20px;text-align:center;height:100px'>
                 <center>
-                <img src='./assets/img/schoolcomputing_logo.png' style='width:60px;vertical-align:middle'>
+                <img src='cid:logo_2u' style='width:60px;vertical-align:middle'>
                 </center>
             </div>
             <div style='background-clip:padding-box;color:#545454;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;overflow:hidden;padding:15px 20px'>
@@ -63,7 +67,7 @@ class sendMail
         $this->mail->Body    = "<div style='max-width:700px;min-width:320px;background:#f5f5f5;width:100%; padding:0px 20px;'>
             <div style='padding:0 20px;text-align:center;height:100px'>
                 <center>
-                <img src='./assets/img/schoolcomputing_logo.png' style='width:60px;vertical-align:middle'>
+                <img src='cid:logo_2u' style='width:60px;vertical-align:middle'>
                 </center>
             </div>
             <div style='background-clip:padding-box;color:#545454;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;overflow:hidden;padding:15px 20px'>
@@ -101,7 +105,7 @@ class sendMail
         $this->mail->Body    = "<div style='max-width:700px;min-width:320px;background:#f5f5f5;width:100%; padding:0px 20px;'>
             <div style='padding:0 20px;text-align:center;height:100px'>
                 <center>
-                <img src='./assets/img/schoolcomputing_logo.png' style='width:60px;vertical-align:middle'>
+                <img src='cid:logo_2u' style='width:60px;vertical-align:middle'>
                 </center>
             </div>
             <div style='background-clip:padding-box;color:#545454;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;overflow:hidden;padding:15px 20px'>
