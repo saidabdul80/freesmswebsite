@@ -1,4 +1,5 @@
 <?php 
+include('printError.php');
 include('./connectxzy.php');
 $name =$_POST["name"];
 $email =$_POST["email"];

@@ -1,4 +1,5 @@
 <?php
+include('printError.php');
 include("./getVisit.php");
 ?>
 <!DOCTYPE html>
