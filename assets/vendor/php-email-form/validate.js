@@ -49,7 +49,7 @@
     }); 
 
   function php_email_form_submit(thisForm, action, formData) {
-    fetch('/Company/contactSubmit.php', {
+    fetch('/contactSubmit.php', {
       method: 'POST',
       body: formData,
       headers: {'X-Requested-With': 'XMLHttpRequest'}
