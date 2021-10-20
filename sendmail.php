@@ -9,7 +9,7 @@ class sendMail
         $this->mail = new PHPMailer;
         $this->mail->SMTPDebug = 2;
         $this->mail->isSMTP();  // Set mailer to use SMTP
-        $this->mail->Host = 'smtp.mailgun.org';  // Specify mailgun SMTP servers smtp.mailgun.org
+        $this->mail->Host = 'localhost';  // Specify mailgun SMTP servers smtp.mailgun.org
         $this->mail->Port = '465';
         $this->mail->SMTPAuth = true; // Enable SMTP authentication
         $this->mail->Username = 'saidabdulsalam5@gmail.com'; // SMTP username from https://mailgun.com/cp/domains
