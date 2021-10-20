@@ -36,9 +36,16 @@ $user_ip = get_client_ip();
 //$json     = file_get_contents("http://ipinfo.io/$user_ip/geo");
 //$json  = json_decode( file_get_contents("http://ip-get-geolocation.com/api/json/".$user_ip), true);
  $json     = json_decode($json, true);
-$country  = $json['country']??"";
-$region   = $json['region']??"";
-$city     = $json['city']??"";
+ $country = $city = $region = "";
+ if(isset($json['country'])){
+    $country  = $json['country'];
+ }
+ if(isset($json['region'])){
+    $region  = $json['region'];
+ }
+ if(isset($json['city'])){
+    $city  = $json['city'];
+ }
 
 $date = date('Y-m-d');
 
