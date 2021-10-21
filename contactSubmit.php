@@ -37,7 +37,8 @@ $details = array(
     'message'=>$message
 );
 $string_to_encrypt=json_encode($details);
-$encrypted_string=openssl_encrypt($string_to_encrypt,"AES-128-ECB",$passwordx);
+
+$encrypted_string=rw_hash($string_to_encrypt);
 //$decrypted_string=openssl_decrypt($encrypted_string,"AES-128-ECB",$password);
 $transport = new sendMail;
 $transport->sendToVerifyUser($email,$encrypted_string);
