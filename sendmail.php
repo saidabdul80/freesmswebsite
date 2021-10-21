@@ -15,7 +15,7 @@ class sendMail
         $this->mail->Port = 465; // Enable SMTP authentication
         $this->mail->Username = 'cares@darul-bayan.com'; // SMTP username from https://mailgun.com/cp/domains
         $this->mail->Password = 'cares@darul-bayan.com'; // SMTP password from https://mailgun.com/cp/domains
-        $this->mail->SMTPSecure = 'tls';   // Enable encryption, 'ssl'
+        $this->mail->SMTPSecure = 'ssl';   // Enable encryption, 'ssl'
         $this->mail->AddEmbeddedImage('assets/img/schoolcomputing_logo.png', 'logo_2u');
     }
 
