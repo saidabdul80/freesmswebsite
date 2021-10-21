@@ -1,6 +1,6 @@
 <?php  
 //Composer's autoload file loads all necessary files
-require 'forms\Mailer\phpmailer\class.phpmailer.php';
+require './forms/Mailer/phpmailer/class.phpmailer.php';
 class sendMail
 {    
     public $mail;
