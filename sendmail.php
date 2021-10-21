@@ -13,8 +13,7 @@ class sendMail
         $this->mail->Host = 'mail.darul-bayan.com';  // Specify mailgun SMTP servers
         $this->mail->SMTPAuth = true; // Enable SMTP authentication
         $this->mail->Port = 465; // Enable SMTP authentication
-        $this->mail->Username = 'cares@darul-bayan.com'; // SMTP username from https://mailgun.com/cp/domains
-        $this->mail->Password = 'cares@darul-bayan.com'; // SMTP password from https://mailgun.com/cp/domains
+        
         $this->mail->SMTPSecure = 'ssl';   // Enable encryption, 'ssl'
         $this->mail->AddEmbeddedImage('assets/img/schoolcomputing_logo.png', 'logo_2u');
     }
