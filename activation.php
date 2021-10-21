@@ -1,8 +1,8 @@
 <?php
 include("./connectxzy.php");
 include('printError.php');
-$transport = new sendMail;
 include('sendmail.php');
+$transport = new sendMail;
 //$encrypted_string=openssl_encrypt($string_to_encrypt,"AES-128-ECB",$password);
 if(isset($_GET['token'])){
     $token  = $_GET['token'];
