@@ -8,11 +8,11 @@ if(isset($_GET['token'])){
     $token  = $_GET['token'];
     
     $details = json_decode(rw_hash($token,false));    
-    $email = $details['email']??$details->email;
-    $name = $details['name']??$details->name;    
-    $phone = $details['phone']??$details->phone;
-    $school = $details['school']??$details->school;
-    $message = $details['message']??$details->message;
+    $email = $details['email'];
+    $name = $details['name'];    
+    $phone = $details['phone'];
+    $school = $details['school'];
+    $message = $details['message'];
     $run = $conn->query("SELECT * FROM `users` WHERE email='$email'");
     if($run->num_rows >0){
         $run = $conn->query("UPDATE `users` SET status='1' WHERE email='$email'");        
