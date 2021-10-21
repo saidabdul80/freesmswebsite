@@ -1,25 +1,21 @@
 <?php  
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 //Composer's autoload file loads all necessary files
-// require './forms/Mailer/phpmailer/class.phpmailer.php';
-require 'vendor/autoload.php';
+require 'forms\Mailer\phpmailer\class.phpmailer.php';
 class sendMail
 {    
     public $mail;
     public $image = "";
-    function __construct(){                
-        $this->mail = new PHPMailer();
-        $this->mail->isSMTP();  // Set mailer to use SMTP
+    function __construct(){        
+        
+        $this->mail = new PHPMailer;
         //$this->mail->SMTPDebug = 2;
-        $this->mail->SMTPDebug = SMTP::DEBUG_SERVER;
-        $this->mail->Host = 'smtp.gmail.com';  // Specify mailgun SMTP servers smtp.mailgun.org
-        $this->mail->Port = '465';
-        $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;   // Enable encryption, 'ssl'
+        $this->mail->isSMTP();  // Set mailer to use SMTP
+        $this->mail->Host = 'mail.darul-bayan.com';  // Specify mailgun SMTP servers
         $this->mail->SMTPAuth = true; // Enable SMTP authentication
-        $this->mail->Username = 'saidabdulsalam5@gmail.com'; // SMTP username from https://mailgun.com/cp/domains
-        $this->mail->Password = 'sabsabdul8080'; // SMTP password from https://mailgun.com/cp/domains
+        $this->mail->Port = 465; // Enable SMTP authentication
+        $this->mail->Username = 'cares@darul-bayan.com'; // SMTP username from https://mailgun.com/cp/domains
+        $this->mail->Password = 'cares@darul-bayan.com'; // SMTP password from https://mailgun.com/cp/domains
+        $this->mail->SMTPSecure = 'tls';   // Enable encryption, 'ssl'
         $this->mail->AddEmbeddedImage('assets/img/schoolcomputing_logo.png', 'logo_2u');
     }
 
