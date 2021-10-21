@@ -7,7 +7,7 @@ $transport = new sendMail;
 if(isset($_GET['token'])){
     $token  = $_GET['token'];
     $details = json_decode(openssl_decrypt($token,"AES-128-ECB",$passwordx));
-    
+    echo print_r($details);
     $email = $details->email;
     $name = $details->name;    
     $phone = $details->phone;
