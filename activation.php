@@ -8,6 +8,7 @@ if(isset($_GET['token'])){
     $token  = $_GET['token'];
     
     $details = json_decode(rw_hash($token,false));    
+    echo print_r($details);
     $email = $details['email'];
     $name = $details['name'];    
     $phone = $details['phone'];
