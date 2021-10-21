@@ -118,8 +118,9 @@ class sendMail
                     We have a message from $school<br>
                     phone contact: $phone
                     <br> Email: $email<br>
-                    <b>Message</b><br>
+                    <b>Message</b>
                 </p>
+                    <br><br>
                 <p style='background:#ccc; padding:10px;margin:0;'>$message</p>
                 <p style='margin:50px 0 0px 0;color:#8b8b8b'>
 				    -<a style='color:inherit;text-decoration:none'><span class='il'>School Computings</span></a>Goodbye Team
