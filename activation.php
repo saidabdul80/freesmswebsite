@@ -8,6 +8,7 @@ if(isset($_GET['token'])){
     $token  = $_GET['token'];
     echo $token;
     $details = json_decode(openssl_decrypt($token,"AES-128-ECB",$passwordx));
+    openssl_error_string();
     echo print_r(openssl_decrypt($token,"AES-128-ECB",$passwordx));
     $email = $details['email'];
     $name = $details['name'];    
