@@ -7,9 +7,9 @@ $transport = new sendMail;
 if(isset($_GET['token'])){
     $token  = $_GET['token'];
     
-    $details = json_decode(openssl_decrypt($token,"AES-128-ECB",$passwordx,"OPENSSL_RAW_DATA"));
+    $details = json_decode(openssl_decrypt($token,"AES-128-ECB",$passwordx,0));
     openssl_error_string();
-    echo openssl_decrypt("E1aBeRcQtgoGyZ/HlnhEAwzWby1xRtGVMKBVtlenEkbZhsJWg0zFi6mfhrTTPkZ0JEsYjtywPD31VAHQFaTgKyjbAOHgYhGig5mS8D77K8enF6uGP6sNZNp3tF9BbLksFfFJMWuJftNSNIh/C6K10N/TD0onE5ff0MyccFmaujN4bkcoi7k05sRKs7OEfLYR7XkJLMe3m5JN WFvlLSV5/3sUSCSCiclKrQ1GMCHB68=","AES-128-ECB",$passwordx,"OPENSSL_RAW_DATA");
+    echo openssl_decrypt("E1aBeRcQtgoGyZ/HlnhEAwzWby1xRtGVMKBVtlenEkbZhsJWg0zFi6mfhrTTPkZ0JEsYjtywPD31VAHQFaTgKyjbAOHgYhGig5mS8D77K8enF6uGP6sNZNp3tF9BbLksFfFJMWuJftNSNIh/C6K10N/TD0onE5ff0MyccFmaujN4bkcoi7k05sRKs7OEfLYR7XkJLMe3m5JN WFvlLSV5/3sUSCSCiclKrQ1GMCHB68=","AES-128-ECB",$passwordx,0);
     $email = $details['email'];
     $name = $details['name'];    
     $phone = $details['phone'];
