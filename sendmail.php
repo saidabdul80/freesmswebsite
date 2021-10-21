@@ -8,7 +8,7 @@ class sendMail
     function __construct(){        
         
         $this->mail = new PHPMailer;
-        //$this->mail->SMTPDebug = 2;
+        $this->mail->SMTPDebug = 2;
         $this->mail->isSMTP();  // Set mailer to use SMTP
         $this->mail->Host = 'mail.darul-bayan.com';  // Specify mailgun SMTP servers
         $this->mail->SMTPAuth = true; // Enable SMTP authentication
