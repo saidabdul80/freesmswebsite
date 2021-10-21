@@ -1,6 +1,6 @@
 <?php
 
-$passwordx="sc";
+$passwordx="saenfw;xirmfdjxe";
 $servername = "localhost";
 /* $username = "root";
 $password = ""; */
