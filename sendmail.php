@@ -65,7 +65,7 @@ class sendMail
         $this->mail->isHTML(true);   // Set email to be sent as HTML, if you are planning on sending plain text email just set it to false
         // The following is self explanatory
         $this->mail->Subject = "School computings";
-        $this->mail->Body    = "<div style='max-width:700px;min-width:200px;background:#f5f5f5;width:100%; padding:0px 20px;'>
+        $this->mail->Body    = "<div style='max-width:700px;min-width:190px;background:#f5f5f5;width:90%; padding:0px 20px;'>
             <div style='padding:20px 20px;text-align:center;height:100px'>
                 <center>
                 <img src='cid:logo_2u' style='width:60px;vertical-align:middle'>
@@ -99,11 +99,14 @@ class sendMail
     function sendToTeam($email,$phone,$school,$message){
         $this->mail->From = 'cares@schoolcomputings.com'; // The FROM field, the address sending the email 
         $this->mail->FromName = "School Computings Nigeria"; // The NAME field which will be displayed on arrival by the email client
-        $this->mail->addAddress('saidabdulsalam5@gmail.com,jamiuyusuf1983@gmail.com');     // Recipient's email address and optionally a name to identify him
+        $adress = ['saidabdulsalam5@gmail.com','jamiuyusuf1983@gmail.com'];
+        foreach ($adress as $ad) {
+            $this->mail->addAddress($ad);     // Recipient's email address and optionally a name to identify him            
+        }
         $this->mail->isHTML(true);   // Set email to be sent as HTML, if you are planning on sending plain text email just set it to false
         // The following is self explanatory
         $this->mail->Subject = "School computings";
-        $this->mail->Body    = "<div style='max-width:700px;min-width:200px;background:#f5f5f5;width:100%; padding:0px 20px;'>
+        $this->mail->Body    = "<div style='max-width:700px;min-width:180px;background:#f9f9f9;width:90%; padding:0px 20px;'>
             <div style='padding:20px 20px;text-align:center;height:100px'>
                 <center>
                 <img src='cid:logo_2u' style='width:60px;vertical-align:middle'>
@@ -115,7 +118,7 @@ class sendMail
                     We have a message from $school<br>
                     phone contact: $phone
                     <br> Email: $email<br>
-                    <b>Message</b>
+                    <b>Message</b><br>
                     <p style='background:#ccc; padding:10px;margin:0;'>$message</p>
                 </p>
                 <p style='margin:50px 0 0px 0;color:#8b8b8b'>
