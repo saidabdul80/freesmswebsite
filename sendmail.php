@@ -66,7 +66,7 @@ class sendMail
         // The following is self explanatory
         $this->mail->Subject = "School computings";
         $this->mail->Body    = "<div style='max-width:700px;min-width:190px;background:#f5f5f5;width:90%; padding:0px 20px;'>
-            <div style='padding:20px 20px;text-align:center;height:100px'>
+            <div style='padding:20px 20px;text-align:center;height:80px'>
                 <center>
                 <img src='cid:logo_2u' style='width:60px;vertical-align:middle'>
                 </center>
@@ -107,7 +107,7 @@ class sendMail
         // The following is self explanatory
         $this->mail->Subject = "School computings";
         $this->mail->Body    = "<div style='max-width:700px;min-width:180px;background:#f9f9f9;width:90%; padding:0px 20px;'>
-            <div style='padding:20px 20px;text-align:center;height:100px'>
+            <div style='padding:20px 20px;text-align:center;height:80px'>
                 <center>
                 <img src='cid:logo_2u' style='width:60px;vertical-align:middle'>
                 </center>
@@ -119,8 +119,8 @@ class sendMail
                     phone contact: $phone
                     <br> Email: $email<br>
                     <b>Message</b><br>
-                    <p style='background:#ccc; padding:10px;margin:0;'>$message</p>
                 </p>
+                <p style='background:#ccc; padding:10px;margin:0;'>$message</p>
                 <p style='margin:50px 0 0px 0;color:#8b8b8b'>
 				    -<a style='color:inherit;text-decoration:none'><span class='il'>School Computings</span></a>Goodbye Team
 				</p>
