@@ -123,7 +123,7 @@ class sendMail
                     <br><br>
                 <p style='background:#ccc; padding:10px;margin:0;'>$message</p>
                 <p style='margin:50px 0 0px 0;color:#8b8b8b'>
-				    -<a style='color:inherit;text-decoration:none'><span class='il'>School Computings</span></a>Goodbye Team
+				    -<a style='color:inherit;text-decoration:none'><span class='il'>School Computings</span></a>, Goodbye Team!
 				</p>
             </div>        
             <div style='padding:20px;color:#8b8b8b;text-align:center'>
