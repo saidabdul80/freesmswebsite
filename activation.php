@@ -6,6 +6,7 @@ $transport = new sendMail;
 //$encrypted_string=openssl_encrypt($string_to_encrypt,"AES-128-ECB",$password);
 if(isset($_GET['token'])){
     $token  = $_GET['token'];
+    echo $token;
     $details = json_decode(openssl_decrypt($token,"AES-128-ECB",$passwordx));
     echo print_r(openssl_decrypt($token,"AES-128-ECB",$passwordx));
     $email = $details['email'];
